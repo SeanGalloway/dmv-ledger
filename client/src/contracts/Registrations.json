@@ -1,0 +1,2302 @@
+{
+  "contractName": "Registrations",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "vin",
+          "type": "bytes"
+        }
+      ],
+      "name": "registerVehicle",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function",
+      "payable": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "vin",
+          "type": "bytes"
+        }
+      ],
+      "name": "getRegistrations",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "expirationDate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct Registrations.Registration",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function",
+      "payable": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "vin",
+          "type": "bytes"
+        }
+      ],
+      "name": "cancelRegistration",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function",
+      "payable": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"vin\",\"type\":\"bytes\"}],\"name\":\"cancelRegistration\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"vin\",\"type\":\"bytes\"}],\"name\":\"getRegistrations\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"expirationDate\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"internalType\":\"struct Registrations.Registration\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"vin\",\"type\":\"bytes\"}],\"name\":\"registerVehicle\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Registrations.sol\":\"Registrations\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Registrations.sol\":{\"keccak256\":\"0x957cfac9cad7f0e747776c4722326002695a8b83a6eb06d6b683ec0f75439b88\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5f0888daff1345374b179421cfd8743327671e3df30685e52aaa7b0f917915bd\",\"dweb:/ipfs/QmcxMEGD3uzWduXWNMGrQNL71H8tvQe7ujxnF1yAxe54Xf\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610574806100206000396000f3fe6080604052600436106100345760003560e01c8063256fe235146100395780632f6a1dd11461005557806388174ab414610071575b600080fd5b610053600480360381019061004e9190610360565b6100a1565b005b61006f600480360381019061006a9190610360565b61017b565b005b61008b60048036038101906100869190610360565b610244565b6040516100989190610436565b60405180910390f35b6658d15e1762800034146100b457600080fd5b6100bc6102dc565b33816020019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff16815250506301e13380420181600001818152505080600083604051610115919061041f565b90815260200160405180910390206000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050505050565b3373ffffffffffffffffffffffffffffffffffffffff166000826040516101a2919061041f565b908152602001604051809103902060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16141561024157600081604051610200919061041f565b90815260200160405180910390206000808201600090556001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550505b50565b61024c6102dc565b60008260405161025c919061041f565b9081526020016040518091039020604051806040016040529081600082015481526020016001820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815250509050919050565b604051806040016040528060008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b600082601f83011261031d57600080fd5b813561033061032b8261047e565b610451565b9150808252602083016020830185838301111561034c57600080fd5b6103578382846104fc565b50505092915050565b60006020828403121561037257600080fd5b600082013567ffffffffffffffff81111561038c57600080fd5b6103988482850161030c565b91505092915050565b6103aa816104c0565b82525050565b60006103bb826104aa565b6103c581856104b5565b93506103d581856020860161050b565b80840191505092915050565b6040820160008201516103f76000850182610410565b50602082015161040a60208501826103a1565b50505050565b610419816104f2565b82525050565b600061042b82846103b0565b915081905092915050565b600060408201905061044b60008301846103e1565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561047457600080fd5b8060405250919050565b600067ffffffffffffffff82111561049557600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600081905092915050565b60006104cb826104d2565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b82818337600083830152505050565b60005b8381101561052957808201518184015260208101905061050e565b83811115610538576000848401525b5050505056fea2646970667358221220f2c03b05f36816154b85d84acd25f9dcb7483a18f4804f0837b981240fcb89e464736f6c634300060c0033",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c8063256fe235146100395780632f6a1dd11461005557806388174ab414610071575b600080fd5b610053600480360381019061004e9190610360565b6100a1565b005b61006f600480360381019061006a9190610360565b61017b565b005b61008b60048036038101906100869190610360565b610244565b6040516100989190610436565b60405180910390f35b6658d15e1762800034146100b457600080fd5b6100bc6102dc565b33816020019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff16815250506301e13380420181600001818152505080600083604051610115919061041f565b90815260200160405180910390206000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509050505050565b3373ffffffffffffffffffffffffffffffffffffffff166000826040516101a2919061041f565b908152602001604051809103902060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16141561024157600081604051610200919061041f565b90815260200160405180910390206000808201600090556001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550505b50565b61024c6102dc565b60008260405161025c919061041f565b9081526020016040518091039020604051806040016040529081600082015481526020016001820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815250509050919050565b604051806040016040528060008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b600082601f83011261031d57600080fd5b813561033061032b8261047e565b610451565b9150808252602083016020830185838301111561034c57600080fd5b6103578382846104fc565b50505092915050565b60006020828403121561037257600080fd5b600082013567ffffffffffffffff81111561038c57600080fd5b6103988482850161030c565b91505092915050565b6103aa816104c0565b82525050565b60006103bb826104aa565b6103c581856104b5565b93506103d581856020860161050b565b80840191505092915050565b6040820160008201516103f76000850182610410565b50602082015161040a60208501826103a1565b50505050565b610419816104f2565b82525050565b600061042b82846103b0565b915081905092915050565b600060408201905061044b60008301846103e1565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561047457600080fd5b8060405250919050565b600067ffffffffffffffff82111561049557600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600081905092915050565b60006104cb826104d2565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b82818337600083830152505050565b60005b8381101561052957808201518184015260208101905061050e565b83811115610538576000848401525b5050505056fea2646970667358221220f2c03b05f36816154b85d84acd25f9dcb7483a18f4804f0837b981240fcb89e464736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "101:749:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "101:749:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;266:268;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;677:171;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;540:131;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;266:268;355:11;342:9;:24;334:33;;;;;;378:21;;:::i;:::-;428:10;418:1;:7;;:20;;;;;;;;;;;486:8;467:15;:28;448:1;:16;;:47;;;;;526:1;505:13;519:3;505:18;;;;;;:::i;:::-;;;;;;;;;;;;;:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;266:268;;:::o;677:171::-;780:10;752:38;;:13;766:3;752:18;;;;;;:::i;:::-;;;;;;;;;;;;;:24;;;;;;;;;;;;:38;;;748:94;;;813:13;827:3;813:18;;;;;;:::i;:::-;;;;;;;;;;;;;;806:25;;;;;;;;;;;;;;;;;;;;;;;748:94;677:171;:::o;540:131::-;608:19;;:::i;:::-;646:13;660:3;646:18;;;;;;:::i;:::-;;;;;;;;;;;;;639:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;540:131;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;:::o;6:440::-;;107:3;100:4;92:6;88:17;84:27;74:2;;125:1;122;115:12;74:2;162:6;149:20;184:64;199:48;240:6;199:48;:::i;:::-;184:64;:::i;:::-;175:73;;268:6;261:5;254:21;304:4;296:6;292:17;337:4;330:5;326:16;372:3;363:6;358:3;354:16;351:25;348:2;;;389:1;386;379:12;348:2;399:41;433:6;428:3;423;399:41;:::i;:::-;67:379;;;;;;;:::o;454:345::-;;567:2;555:9;546:7;542:23;538:32;535:2;;;583:1;580;573:12;535:2;646:1;635:9;631:17;618:31;669:18;661:6;658:30;655:2;;;701:1;698;691:12;655:2;721:62;775:7;766:6;755:9;751:22;721:62;:::i;:::-;711:72;;597:192;529:270;;;;:::o;806:103::-;879:24;897:5;879:24;:::i;:::-;874:3;867:37;861:48;;:::o;916:356::-;;1044:38;1076:5;1044:38;:::i;:::-;1094:88;1175:6;1170:3;1094:88;:::i;:::-;1087:95;;1187:52;1232:6;1227:3;1220:4;1213:5;1209:16;1187:52;:::i;:::-;1260:6;1255:3;1251:16;1244:23;;1024:248;;;;;:::o;1356:495::-;1507:4;1502:3;1498:14;1600:4;1593:5;1589:16;1583:23;1612:63;1669:4;1664:3;1660:14;1646:12;1612:63;:::i;:::-;1527:154;1755:4;1748:5;1744:16;1738:23;1767:63;1824:4;1819:3;1815:14;1801:12;1767:63;:::i;:::-;1691:145;1480:371;;;:::o;1858:103::-;1931:24;1949:5;1931:24;:::i;:::-;1926:3;1919:37;1913:48;;:::o;1968:271::-;;2121:93;2210:3;2201:6;2121:93;:::i;:::-;2114:100;;2231:3;2224:10;;2102:137;;;;:::o;2246:338::-;;2431:2;2420:9;2416:18;2408:26;;2445:129;2571:1;2560:9;2556:17;2547:6;2445:129;:::i;:::-;2402:182;;;;:::o;2591:256::-;;2653:2;2647:9;2637:19;;2691:4;2683:6;2679:17;2790:6;2778:10;2775:22;2754:18;2742:10;2739:34;2736:62;2733:2;;;2811:1;2808;2801:12;2733:2;2831:10;2827:2;2820:22;2631:216;;;;:::o;2854:321::-;;2997:18;2989:6;2986:30;2983:2;;;3029:1;3026;3019:12;2983:2;3096:4;3092:9;3085:4;3077:6;3073:17;3069:33;3061:41;;3160:4;3154;3150:15;3142:23;;2920:255;;;:::o;3182:121::-;;3275:5;3269:12;3259:22;;3240:63;;;:::o;3311:144::-;;3446:3;3431:18;;3424:31;;;;:::o;3463:91::-;;3525:24;3543:5;3525:24;:::i;:::-;3514:35;;3508:46;;;:::o;3561:121::-;;3634:42;3627:5;3623:54;3612:65;;3606:76;;;:::o;3689:72::-;;3751:5;3740:16;;3734:27;;;:::o;3769:145::-;3850:6;3845:3;3840;3827:30;3906:1;3897:6;3892:3;3888:16;3881:27;3820:94;;;:::o;3923:268::-;3988:1;3995:101;4009:6;4006:1;4003:13;3995:101;;;4085:1;4080:3;4076:11;4070:18;4066:1;4061:3;4057:11;4050:39;4031:2;4028:1;4024:10;4019:15;;3995:101;;;4111:6;4108:1;4105:13;4102:2;;;4176:1;4167:6;4162:3;4158:16;4151:27;4102:2;3972:219;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.6.0 <8.10.0;\n\npragma experimental ABIEncoderV2;\n\ncontract Registrations {\n    struct Registration {\n        uint expirationDate;\n        address owner;\n    }\n\n    mapping(bytes => Registration) registrations;\n\n    function registerVehicle(bytes memory vin) public payable {\n        require(msg.value == 0.025 ether);\n\n        Registration memory r;\n        \n        r.owner = msg.sender;\n        r.expirationDate = block.timestamp + (365 days);\n        registrations[vin] = r;\n    }\n\n    function getRegistrations(bytes memory vin) public payable returns (Registration memory) {\n        return registrations[vin];\n    }\n\n    function cancelRegistration(bytes memory vin) public payable {\n        if (registrations[vin].owner == msg.sender) {\n            delete registrations[vin];\n        }\n    }\n}",
+  "sourcePath": "/Users/seangalloway/Coding_Projects/College/9Spring_2022/764CS/project/dmv-backend/contracts/Registrations.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Registrations.sol",
+    "exportedSymbols": {
+      "Registrations": [
+        457
+      ]
+    },
+    "id": 458,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 375,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "8.10",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:1"
+      },
+      {
+        "id": 376,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "66:33:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 457,
+        "linearizedBaseContracts": [
+          457
+        ],
+        "name": "Registrations",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Registrations.Registration",
+            "id": 381,
+            "members": [
+              {
+                "constant": false,
+                "id": 378,
+                "mutability": "mutable",
+                "name": "expirationDate",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 381,
+                "src": "160:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 377,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "160:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 380,
+                "mutability": "mutable",
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 381,
+                "src": "189:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 379,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "189:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Registration",
+            "nodeType": "StructDefinition",
+            "scope": 457,
+            "src": "130:79:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 385,
+            "mutability": "mutable",
+            "name": "registrations",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 457,
+            "src": "215:44:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes_memory_ptr_$_t_struct$_Registration_$381_storage_$",
+              "typeString": "mapping(bytes => struct Registrations.Registration)"
+            },
+            "typeName": {
+              "id": 384,
+              "keyType": {
+                "id": 382,
+                "name": "bytes",
+                "nodeType": "ElementaryTypeName",
+                "src": "223:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "215:30:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes_memory_ptr_$_t_struct$_Registration_$381_storage_$",
+                "typeString": "mapping(bytes => struct Registrations.Registration)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 383,
+                "name": "Registration",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 381,
+                "src": "232:12:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Registration_$381_storage_ptr",
+                  "typeString": "struct Registrations.Registration"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 423,
+              "nodeType": "Block",
+              "src": "324:210:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 394,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 391,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "342:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 392,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "342:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "302e303235",
+                          "id": 393,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "355:11:1",
+                          "subdenomination": "ether",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_25000000000000000_by_1",
+                            "typeString": "int_const 25000000000000000"
+                          },
+                          "value": "0.025"
+                        },
+                        "src": "342:24:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 390,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "334:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 395,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "334:33:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 396,
+                  "nodeType": "ExpressionStatement",
+                  "src": "334:33:1"
+                },
+                {
+                  "assignments": [
+                    398
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 398,
+                      "mutability": "mutable",
+                      "name": "r",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 423,
+                      "src": "378:21:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Registration_$381_memory_ptr",
+                        "typeString": "struct Registrations.Registration"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 397,
+                        "name": "Registration",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 381,
+                        "src": "378:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Registration_$381_storage_ptr",
+                          "typeString": "struct Registrations.Registration"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 399,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "378:21:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 405,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 400,
+                        "name": "r",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 398,
+                        "src": "418:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Registration_$381_memory_ptr",
+                          "typeString": "struct Registrations.Registration memory"
+                        }
+                      },
+                      "id": 402,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 380,
+                      "src": "418:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 403,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "428:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 404,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "428:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "418:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 406,
+                  "nodeType": "ExpressionStatement",
+                  "src": "418:20:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 415,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 407,
+                        "name": "r",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 398,
+                        "src": "448:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Registration_$381_memory_ptr",
+                          "typeString": "struct Registrations.Registration memory"
+                        }
+                      },
+                      "id": 409,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "expirationDate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 378,
+                      "src": "448:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 414,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 410,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -4,
+                          "src": "467:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 411,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "467:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "333635",
+                            "id": 412,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "486:8:1",
+                            "subdenomination": "days",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_31536000_by_1",
+                              "typeString": "int_const 31536000"
+                            },
+                            "value": "365"
+                          }
+                        ],
+                        "id": 413,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "485:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_31536000_by_1",
+                          "typeString": "int_const 31536000"
+                        }
+                      },
+                      "src": "467:28:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "448:47:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 416,
+                  "nodeType": "ExpressionStatement",
+                  "src": "448:47:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 421,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 417,
+                        "name": "registrations",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 385,
+                        "src": "505:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes_memory_ptr_$_t_struct$_Registration_$381_storage_$",
+                          "typeString": "mapping(bytes memory => struct Registrations.Registration storage ref)"
+                        }
+                      },
+                      "id": 419,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 418,
+                        "name": "vin",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 387,
+                        "src": "519:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "505:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Registration_$381_storage",
+                        "typeString": "struct Registrations.Registration storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 420,
+                      "name": "r",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 398,
+                      "src": "526:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Registration_$381_memory_ptr",
+                        "typeString": "struct Registrations.Registration memory"
+                      }
+                    },
+                    "src": "505:22:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Registration_$381_storage",
+                      "typeString": "struct Registrations.Registration storage ref"
+                    }
+                  },
+                  "id": 422,
+                  "nodeType": "ExpressionStatement",
+                  "src": "505:22:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "256fe235",
+            "id": 424,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerVehicle",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 388,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 387,
+                  "mutability": "mutable",
+                  "name": "vin",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 424,
+                  "src": "291:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 386,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "291:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "290:18:1"
+            },
+            "returnParameters": {
+              "id": 389,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "324:0:1"
+            },
+            "scope": 457,
+            "src": "266:268:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 435,
+              "nodeType": "Block",
+              "src": "629:42:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 431,
+                      "name": "registrations",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 385,
+                      "src": "646:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes_memory_ptr_$_t_struct$_Registration_$381_storage_$",
+                        "typeString": "mapping(bytes memory => struct Registrations.Registration storage ref)"
+                      }
+                    },
+                    "id": 433,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 432,
+                      "name": "vin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 426,
+                      "src": "660:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes memory"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "646:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Registration_$381_storage",
+                      "typeString": "struct Registrations.Registration storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 430,
+                  "id": 434,
+                  "nodeType": "Return",
+                  "src": "639:25:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "88174ab4",
+            "id": 436,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRegistrations",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 427,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 426,
+                  "mutability": "mutable",
+                  "name": "vin",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 436,
+                  "src": "566:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 425,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "566:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "565:18:1"
+            },
+            "returnParameters": {
+              "id": 430,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 429,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 436,
+                  "src": "608:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Registration_$381_memory_ptr",
+                    "typeString": "struct Registrations.Registration"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 428,
+                    "name": "Registration",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 381,
+                    "src": "608:12:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Registration_$381_storage_ptr",
+                      "typeString": "struct Registrations.Registration"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "607:21:1"
+            },
+            "scope": 457,
+            "src": "540:131:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 455,
+              "nodeType": "Block",
+              "src": "738:110:1",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 447,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 441,
+                          "name": "registrations",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 385,
+                          "src": "752:13:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_bytes_memory_ptr_$_t_struct$_Registration_$381_storage_$",
+                            "typeString": "mapping(bytes memory => struct Registrations.Registration storage ref)"
+                          }
+                        },
+                        "id": 443,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 442,
+                          "name": "vin",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 438,
+                          "src": "766:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "752:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Registration_$381_storage",
+                          "typeString": "struct Registrations.Registration storage ref"
+                        }
+                      },
+                      "id": 444,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 380,
+                      "src": "752:24:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 445,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "780:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 446,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "780:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "752:38:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 454,
+                  "nodeType": "IfStatement",
+                  "src": "748:94:1",
+                  "trueBody": {
+                    "id": 453,
+                    "nodeType": "Block",
+                    "src": "792:50:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 451,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "UnaryOperation",
+                          "operator": "delete",
+                          "prefix": true,
+                          "src": "806:25:1",
+                          "subExpression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 448,
+                              "name": "registrations",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 385,
+                              "src": "813:13:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_bytes_memory_ptr_$_t_struct$_Registration_$381_storage_$",
+                                "typeString": "mapping(bytes memory => struct Registrations.Registration storage ref)"
+                              }
+                            },
+                            "id": 450,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 449,
+                              "name": "vin",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 438,
+                              "src": "827:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "813:18:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Registration_$381_storage",
+                              "typeString": "struct Registrations.Registration storage ref"
+                            }
+                          },
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 452,
+                        "nodeType": "ExpressionStatement",
+                        "src": "806:25:1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "2f6a1dd1",
+            "id": 456,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelRegistration",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 439,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 438,
+                  "mutability": "mutable",
+                  "name": "vin",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 456,
+                  "src": "705:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 437,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "705:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "704:18:1"
+            },
+            "returnParameters": {
+              "id": 440,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "738:0:1"
+            },
+            "scope": 457,
+            "src": "677:171:1",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 458,
+        "src": "101:749:1"
+      }
+    ],
+    "src": "32:818:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Registrations.sol",
+      "exportedSymbols": {
+        "Registrations": [
+          457
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.6",
+            ".0",
+            "<",
+            "8.10",
+            ".0"
+          ]
+        },
+        "id": 375,
+        "name": "PragmaDirective",
+        "src": "32:32:1"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 376,
+        "name": "PragmaDirective",
+        "src": "66:33:1"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            457
+          ],
+          "name": "Registrations",
+          "scope": 458
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "Registrations.Registration",
+              "name": "Registration",
+              "scope": 457,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "expirationDate",
+                  "overrides": null,
+                  "scope": 381,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 377,
+                    "name": "ElementaryTypeName",
+                    "src": "160:4:1"
+                  }
+                ],
+                "id": 378,
+                "name": "VariableDeclaration",
+                "src": "160:19:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "overrides": null,
+                  "scope": 381,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 379,
+                    "name": "ElementaryTypeName",
+                    "src": "189:7:1"
+                  }
+                ],
+                "id": 380,
+                "name": "VariableDeclaration",
+                "src": "189:13:1"
+              }
+            ],
+            "id": 381,
+            "name": "StructDefinition",
+            "src": "130:79:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "registrations",
+              "overrides": null,
+              "scope": 457,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(bytes => struct Registrations.Registration)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(bytes => struct Registrations.Registration)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 382,
+                    "name": "ElementaryTypeName",
+                    "src": "223:5:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Registration",
+                      "referencedDeclaration": 381,
+                      "type": "struct Registrations.Registration"
+                    },
+                    "id": 383,
+                    "name": "UserDefinedTypeName",
+                    "src": "232:12:1"
+                  }
+                ],
+                "id": 384,
+                "name": "Mapping",
+                "src": "215:30:1"
+              }
+            ],
+            "id": 385,
+            "name": "VariableDeclaration",
+            "src": "215:44:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "256fe235",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "registerVehicle",
+              "overrides": null,
+              "scope": 457,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "vin",
+                      "overrides": null,
+                      "scope": 424,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 386,
+                        "name": "ElementaryTypeName",
+                        "src": "291:5:1"
+                      }
+                    ],
+                    "id": 387,
+                    "name": "VariableDeclaration",
+                    "src": "291:16:1"
+                  }
+                ],
+                "id": 388,
+                "name": "ParameterList",
+                "src": "290:18:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 389,
+                "name": "ParameterList",
+                "src": "324:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 390,
+                            "name": "Identifier",
+                            "src": "334:7:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "value",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": -15,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 391,
+                                    "name": "Identifier",
+                                    "src": "342:3:1"
+                                  }
+                                ],
+                                "id": 392,
+                                "name": "MemberAccess",
+                                "src": "342:9:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "302e303235",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": "ether",
+                                  "token": "number",
+                                  "type": "int_const 25000000000000000",
+                                  "value": "0.025"
+                                },
+                                "id": 393,
+                                "name": "Literal",
+                                "src": "355:11:1"
+                              }
+                            ],
+                            "id": 394,
+                            "name": "BinaryOperation",
+                            "src": "342:24:1"
+                          }
+                        ],
+                        "id": 395,
+                        "name": "FunctionCall",
+                        "src": "334:33:1"
+                      }
+                    ],
+                    "id": 396,
+                    "name": "ExpressionStatement",
+                    "src": "334:33:1"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        398
+                      ],
+                      "initialValue": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "mutability": "mutable",
+                          "name": "r",
+                          "overrides": null,
+                          "scope": 423,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct Registrations.Registration",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Registration",
+                              "referencedDeclaration": 381,
+                              "type": "struct Registrations.Registration"
+                            },
+                            "id": 397,
+                            "name": "UserDefinedTypeName",
+                            "src": "378:12:1"
+                          }
+                        ],
+                        "id": 398,
+                        "name": "VariableDeclaration",
+                        "src": "378:21:1"
+                      }
+                    ],
+                    "id": 399,
+                    "name": "VariableDeclarationStatement",
+                    "src": "378:21:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "owner",
+                              "referencedDeclaration": 380,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 398,
+                                  "type": "struct Registrations.Registration memory",
+                                  "value": "r"
+                                },
+                                "id": 400,
+                                "name": "Identifier",
+                                "src": "418:1:1"
+                              }
+                            ],
+                            "id": 402,
+                            "name": "MemberAccess",
+                            "src": "418:7:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -15,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 403,
+                                "name": "Identifier",
+                                "src": "428:3:1"
+                              }
+                            ],
+                            "id": 404,
+                            "name": "MemberAccess",
+                            "src": "428:10:1"
+                          }
+                        ],
+                        "id": 405,
+                        "name": "Assignment",
+                        "src": "418:20:1"
+                      }
+                    ],
+                    "id": 406,
+                    "name": "ExpressionStatement",
+                    "src": "418:20:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "expirationDate",
+                              "referencedDeclaration": 378,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 398,
+                                  "type": "struct Registrations.Registration memory",
+                                  "value": "r"
+                                },
+                                "id": 407,
+                                "name": "Identifier",
+                                "src": "448:1:1"
+                              }
+                            ],
+                            "id": 409,
+                            "name": "MemberAccess",
+                            "src": "448:16:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "timestamp",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": -4,
+                                      "type": "block",
+                                      "value": "block"
+                                    },
+                                    "id": 410,
+                                    "name": "Identifier",
+                                    "src": "467:5:1"
+                                  }
+                                ],
+                                "id": 411,
+                                "name": "MemberAccess",
+                                "src": "467:15:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "int_const 31536000"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "333635",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": "days",
+                                      "token": "number",
+                                      "type": "int_const 31536000",
+                                      "value": "365"
+                                    },
+                                    "id": 412,
+                                    "name": "Literal",
+                                    "src": "486:8:1"
+                                  }
+                                ],
+                                "id": 413,
+                                "name": "TupleExpression",
+                                "src": "485:10:1"
+                              }
+                            ],
+                            "id": 414,
+                            "name": "BinaryOperation",
+                            "src": "467:28:1"
+                          }
+                        ],
+                        "id": 415,
+                        "name": "Assignment",
+                        "src": "448:47:1"
+                      }
+                    ],
+                    "id": 416,
+                    "name": "ExpressionStatement",
+                    "src": "448:47:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct Registrations.Registration storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct Registrations.Registration storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 385,
+                                  "type": "mapping(bytes memory => struct Registrations.Registration storage ref)",
+                                  "value": "registrations"
+                                },
+                                "id": 417,
+                                "name": "Identifier",
+                                "src": "505:13:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 387,
+                                  "type": "bytes memory",
+                                  "value": "vin"
+                                },
+                                "id": 418,
+                                "name": "Identifier",
+                                "src": "519:3:1"
+                              }
+                            ],
+                            "id": 419,
+                            "name": "IndexAccess",
+                            "src": "505:18:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 398,
+                              "type": "struct Registrations.Registration memory",
+                              "value": "r"
+                            },
+                            "id": 420,
+                            "name": "Identifier",
+                            "src": "526:1:1"
+                          }
+                        ],
+                        "id": 421,
+                        "name": "Assignment",
+                        "src": "505:22:1"
+                      }
+                    ],
+                    "id": 422,
+                    "name": "ExpressionStatement",
+                    "src": "505:22:1"
+                  }
+                ],
+                "id": 423,
+                "name": "Block",
+                "src": "324:210:1"
+              }
+            ],
+            "id": 424,
+            "name": "FunctionDefinition",
+            "src": "266:268:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "88174ab4",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getRegistrations",
+              "overrides": null,
+              "scope": 457,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "vin",
+                      "overrides": null,
+                      "scope": 436,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 425,
+                        "name": "ElementaryTypeName",
+                        "src": "566:5:1"
+                      }
+                    ],
+                    "id": 426,
+                    "name": "VariableDeclaration",
+                    "src": "566:16:1"
+                  }
+                ],
+                "id": 427,
+                "name": "ParameterList",
+                "src": "565:18:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 436,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct Registrations.Registration",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Registration",
+                          "referencedDeclaration": 381,
+                          "type": "struct Registrations.Registration"
+                        },
+                        "id": 428,
+                        "name": "UserDefinedTypeName",
+                        "src": "608:12:1"
+                      }
+                    ],
+                    "id": 429,
+                    "name": "VariableDeclaration",
+                    "src": "608:19:1"
+                  }
+                ],
+                "id": 430,
+                "name": "ParameterList",
+                "src": "607:21:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 430
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct Registrations.Registration storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 385,
+                              "type": "mapping(bytes memory => struct Registrations.Registration storage ref)",
+                              "value": "registrations"
+                            },
+                            "id": 431,
+                            "name": "Identifier",
+                            "src": "646:13:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 426,
+                              "type": "bytes memory",
+                              "value": "vin"
+                            },
+                            "id": 432,
+                            "name": "Identifier",
+                            "src": "660:3:1"
+                          }
+                        ],
+                        "id": 433,
+                        "name": "IndexAccess",
+                        "src": "646:18:1"
+                      }
+                    ],
+                    "id": 434,
+                    "name": "Return",
+                    "src": "639:25:1"
+                  }
+                ],
+                "id": 435,
+                "name": "Block",
+                "src": "629:42:1"
+              }
+            ],
+            "id": 436,
+            "name": "FunctionDefinition",
+            "src": "540:131:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "2f6a1dd1",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "cancelRegistration",
+              "overrides": null,
+              "scope": 457,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "vin",
+                      "overrides": null,
+                      "scope": 456,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 437,
+                        "name": "ElementaryTypeName",
+                        "src": "705:5:1"
+                      }
+                    ],
+                    "id": 438,
+                    "name": "VariableDeclaration",
+                    "src": "705:16:1"
+                  }
+                ],
+                "id": 439,
+                "name": "ParameterList",
+                "src": "704:18:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 440,
+                "name": "ParameterList",
+                "src": "738:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "owner",
+                              "referencedDeclaration": 380,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Registrations.Registration storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 385,
+                                      "type": "mapping(bytes memory => struct Registrations.Registration storage ref)",
+                                      "value": "registrations"
+                                    },
+                                    "id": 441,
+                                    "name": "Identifier",
+                                    "src": "752:13:1"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 438,
+                                      "type": "bytes memory",
+                                      "value": "vin"
+                                    },
+                                    "id": 442,
+                                    "name": "Identifier",
+                                    "src": "766:3:1"
+                                  }
+                                ],
+                                "id": 443,
+                                "name": "IndexAccess",
+                                "src": "752:18:1"
+                              }
+                            ],
+                            "id": 444,
+                            "name": "MemberAccess",
+                            "src": "752:24:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -15,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 445,
+                                "name": "Identifier",
+                                "src": "780:3:1"
+                              }
+                            ],
+                            "id": 446,
+                            "name": "MemberAccess",
+                            "src": "780:10:1"
+                          }
+                        ],
+                        "id": 447,
+                        "name": "BinaryOperation",
+                        "src": "752:38:1"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "delete",
+                                  "prefix": true,
+                                  "type": "tuple()"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "struct Registrations.Registration storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 385,
+                                          "type": "mapping(bytes memory => struct Registrations.Registration storage ref)",
+                                          "value": "registrations"
+                                        },
+                                        "id": 448,
+                                        "name": "Identifier",
+                                        "src": "813:13:1"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 438,
+                                          "type": "bytes memory",
+                                          "value": "vin"
+                                        },
+                                        "id": 449,
+                                        "name": "Identifier",
+                                        "src": "827:3:1"
+                                      }
+                                    ],
+                                    "id": 450,
+                                    "name": "IndexAccess",
+                                    "src": "813:18:1"
+                                  }
+                                ],
+                                "id": 451,
+                                "name": "UnaryOperation",
+                                "src": "806:25:1"
+                              }
+                            ],
+                            "id": 452,
+                            "name": "ExpressionStatement",
+                            "src": "806:25:1"
+                          }
+                        ],
+                        "id": 453,
+                        "name": "Block",
+                        "src": "792:50:1"
+                      }
+                    ],
+                    "id": 454,
+                    "name": "IfStatement",
+                    "src": "748:94:1"
+                  }
+                ],
+                "id": 455,
+                "name": "Block",
+                "src": "738:110:1"
+              }
+            ],
+            "id": 456,
+            "name": "FunctionDefinition",
+            "src": "677:171:1"
+          }
+        ],
+        "id": 457,
+        "name": "ContractDefinition",
+        "src": "101:749:1"
+      }
+    ],
+    "id": 458,
+    "name": "SourceUnit",
+    "src": "32:818:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x156273069bDa2d9148bEab6aA0403A4D64a7c8fe",
+      "transactionHash": "0xbc188a3a7ce039f21a0dbec75bb6964a47c9f0d31c63164b4619464a700a22a6"
+    }
+  },
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-04-24T03:10:10.743Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
