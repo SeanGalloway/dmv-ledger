@@ -109,7 +109,7 @@ const VehicleServices = () => {
         
             <h2>My Vehicles</h2>
             <div>
-                {myVehicles.map(element => 
+                {myVehicles.filter((it: any) => it.isValue).map(element => 
                     <li key={element}>
                         {JSON.stringify(element)}
                     </li>
