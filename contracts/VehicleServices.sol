@@ -4,6 +4,7 @@ pragma experimental ABIEncoderV2;
 
 contract VehicleServices {
     struct Title {
+        bool isValue;
         uint year;
         string make;
         string model;
@@ -24,6 +25,7 @@ contract VehicleServices {
     ) public payable {
         require(msg.value == 0.015 ether);
         Title memory t;
+        t.isValue = true;
         t.color = color;
         t.make = make;
         t.model = model;
@@ -36,10 +38,23 @@ contract VehicleServices {
 
     function getVehicles() public view returns (Title[] memory) {
         bytes[] memory userVins = findVinsByOwner[msg.sender];
-        Title[] memory userTitles = new Title[](userVins.length);
+        
+
+        uint16 numberOfVehicles = 0;
 
         for (uint256 index = 0; index < userVins.length; index++) {
-            userTitles[index] = titles[userVins[index]];
+            if (titles[userVins[index]].isValue) {
+                numberOfVehicles++;
+            }
+        }
+
+        Title[] memory userTitles = new Title[](numberOfVehicles);
+        numberOfVehicles = 0;
+        for (uint256 index = 0; index < userVins.length; index++) {
+            if (titles[userVins[index]].isValue) {
+                userTitles[numberOfVehicles] = titles[userVins[index]];
+                numberOfVehicles++;
+            }
         }
 
         return userTitles;
@@ -65,8 +80,7 @@ contract VehicleServices {
     function sellVehicle(bytes memory vin, address payable buyer) external payable {
         require(titles[vin].owner == msg.sender);
         require(msg.value == 0.03 ether);
-        
-        delete titles[vin];
+
 
         bytes[] memory currentOwnerVins = findVinsByOwner[msg.sender];
 
